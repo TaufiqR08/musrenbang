@@ -1,5 +1,5 @@
 <?php
-    include '.\assets\Library\TCPDF\tcpdf.php';
+    // include '.\assets\Library\TCPDF\tcpdf.php';
     // include '.\assets\Library\mail\cmail.php';
     include 'Termal.php';
     // use Dompdf\Dompdf;
