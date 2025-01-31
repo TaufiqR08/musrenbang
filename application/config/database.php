@@ -79,7 +79,7 @@ $db['default'] = array(
 	
 	
 	'username' => 'root',
-	'password' => 'root',
+	'password' => 'YES',
 	'database' => 'sipj_app',
 	'dbdriver' => 'mysqli',
 
