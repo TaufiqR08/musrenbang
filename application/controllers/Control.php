@@ -158,16 +158,22 @@ class Control extends CI_Controller {
         $kodeForm=$keyForm;
         // return print_r(_cekKey($kodeForm,$kdMember,$this->sess->tahun,$this->dapp['kd']));
         $q=_cekKey($kodeForm,$kdMember,$this->sess->tahun,$this->dapp['kd']);
-		// return print_r($q);
+		//  print_r($keyForm,$kdMember);
+        // return print_r(($q));
         $member=$this->qexec->_func($q);
         // hilangkan tanda / jika ada 
         $split=explode("/",$kodeForm)[0];
+        
         $q=_groupKey($split,$kdMember,$this->sess->tahun,$this->dapp['kd']);
         $member1=$this->qexec->_func($q);
+        // return print_r(($member));
+        
+            
+        
+        
         if(count($member)==1){
             return true;
         }else if(count($member1)==0){
-
             $this->addKeySistem(base64_encode(json_encode(
                 [
                     "kdMember"=>$kdMember,
@@ -280,8 +286,8 @@ class Control extends CI_Controller {
                 }
             }
         }
-		// return print_r($q);
         $q=substr($q,0,strlen($q)-1);
+        // return print_r($q);
         if(strlen($q)==0){
             // return print_r("Data Key Sudah Sesuai");
             return true;

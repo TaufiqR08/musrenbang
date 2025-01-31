@@ -41,6 +41,7 @@ class Proses extends CI_Controller {
         $q="select * from member where kdDinas='".$kdDinas."' and UPPER(nmMember)=UPPER('".$username."') and 
             UPPER(password)=UPPER('".$password."') and kdApp='".$this->mbgs->_getBasisData()['kd']."'
         ";
+        // return print_r($q);
         // return print_r($this->_);
         $member=$this->qexec->_func($q);
         if(count($member)==1){
