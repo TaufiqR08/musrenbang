@@ -84,7 +84,7 @@ $db['default'] = array(
 	// 'dbdriver' => 'mysqli',
 
 	// 'database' => 'bappeda', DXH=;F+S%pd? bapped14_4dminDev
-	'username' => 'bapped14_4dminDev',
+	'username' => 'bappedaksb',
 	'password' => 'DXH=;F+S%pd?',
 	'database' => 'bapped14_musrenbang',
 	'dbdriver' => 'mysqli',
