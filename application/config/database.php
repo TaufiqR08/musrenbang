@@ -75,7 +75,7 @@ $query_builder = TRUE;
 // (ENVIRONMENT !== 'production')
 $db['default'] = array(
 	'dsn'	=> '',
-	// 'hostname' => 'localhost',
+	'hostname' => 'localhost',
 	
 	
 	// 'username' => 'root',
@@ -83,10 +83,9 @@ $db['default'] = array(
 	// 'database' => 'sipj_app',
 	// 'dbdriver' => 'mysqli',
 
-	// 'database' => 'bappeda', 0Q3DMzz32En9 bapped14_4dminDev
-	'hostname' => 'trust.jagoanhosting.com',
+	// 'database' => 'bappeda', DXH=;F+S%pd? bapped14_4dminDev
 	'username' => 'bapped14_4dminDev',
-	'password' => '0Q3DMzz32En9',
+	'password' => 'DXH=;F+S%pd?',
 	'database' => 'bapped14_musrenbang',
 	'dbdriver' => 'mysqli',
 	
