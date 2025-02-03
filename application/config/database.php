@@ -83,9 +83,9 @@ $db['default'] = array(
 	// 'database' => 'sipj_app',
 	// 'dbdriver' => 'mysqli',
 
-	// 'database' => 'bappeda', DXH=;F+S%pd? bapped14_4dminDev
-	'username' => 'root',
-	'password' => 'root',
+	// 'database' => 'bappeda', x2PnJ$CqvE70 bapped14_dev
+	'username' => 'bapped14_dev',
+	'password' => 'x2PnJ$CqvE70',
 	'database' => 'bapped14_musrenbang',
 	'dbdriver' => 'mysqli',
 	
