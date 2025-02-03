@@ -83,10 +83,10 @@ $db['default'] = array(
 	// 'database' => 'sipj_app',
 	// 'dbdriver' => 'mysqli',
 
-	// 'database' => 'bappeda', x2PnJ$CqvE70 bapped14_dev
+	// 'database' => 'bappeda', bappedaksb21 bapped14_dev
 	'hostname' => 'localhost', //
 	'username' => 'bapped14_dev',
-	'password' => 'x2PnJ$CqvE70',
+	'password' => 'bappedaksb21',
 	'database' => 'bapped14_musrenbang',
 	'dbdriver' => 'mysqli',
 	
