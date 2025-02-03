@@ -78,16 +78,16 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	
 	
-	'username' => 'root',
-	'password' => 'root',
-	'database' => 'sipj_app',
-	'dbdriver' => 'mysqli',
+	// 'username' => 'root',
+	// 'password' => 'root',
+	// 'database' => 'sipj_app',
+	// 'dbdriver' => 'mysqli',
 
 	// 'database' => 'bappeda', k6wAMg@km8Cm@fX  bapped14_4dminDev
-	// 'username' => 'bapped14_4dminDev',
-	// 'password' => 'k6wAMg@km8Cm@fX',
-	// 'database' => 'bapped14_musrenbang',
-	// 'dbdriver' => 'mysqli',
+	'username' => 'bapped14_4dminDev',
+	'password' => 'k6wAMg@km8Cm@fX',
+	'database' => 'bapped14_musrenbang',
+	'dbdriver' => 'mysqli',
 	
 	'dbprefix' => '',
 	'pconnect' => FALSE,
