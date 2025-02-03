@@ -75,7 +75,7 @@ $query_builder = TRUE;
 // (ENVIRONMENT !== 'production')
 $db['default'] = array(
 	'dsn'	=> '',
-	// 'hostname' => 'localhost',
+	'hostname' => 'localhost',
 	
 	
 	// 'username' => 'root',
@@ -84,7 +84,6 @@ $db['default'] = array(
 	// 'dbdriver' => 'mysqli',
 
 	// 'database' => 'bappeda', 0Q3DMzz32En9 bapped14_4dminDev
-	'hostname' => 'localhost:3306',
 	'username' => 'bappeda14_4dminDev',
 	'password' => '0Q3DMzz32En9',
 	'database' => 'bapped14_musrenbang',
