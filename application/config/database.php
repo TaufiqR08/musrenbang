@@ -85,7 +85,7 @@ $db['default'] = array(
 
 	// 'database' => 'bappeda', x2PnJ$CqvE70 bapped14_dev
 	'username' => 'bapped14_dev',
-	'password' => '',
+	'password' => 'x2PnJ$CqvE70',
 	'database' => 'bapped14_musrenbang',
 	'dbdriver' => 'mysqli',
 	
