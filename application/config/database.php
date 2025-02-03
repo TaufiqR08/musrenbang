@@ -84,7 +84,7 @@ $db['default'] = array(
 	// 'dbdriver' => 'mysqli',
 
 	// 'database' => 'bappeda', x2PnJ$CqvE70 bapped14_dev
-	'hostname' => 'mysql.bappedasumbawabarat.com',
+	'hostname' => 'localhost', //
 	'username' => 'bapped14_dev',
 	'password' => 'x2PnJ$CqvE70',
 	'database' => 'bapped14_musrenbang',
