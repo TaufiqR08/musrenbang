@@ -56,7 +56,7 @@ function _formData() {
 			btn:
 				_.kdJabatan != 2 && !Number(_.key.c)
 					? button_.ex2({
-							text: `<span class="mdi mdi-form-select "></span> Form Usulan`,
+							text: `<span class="mdi mdi-form-select "></span> Form Entri`,
 							cls: " btn-sm bg-info ",
 							attr: ` onclick='_fadd()'`,
 					  })
@@ -219,7 +219,7 @@ function setTabel() {
 function _fadd() {
 	modal_.setMo({
 		ex: 1,
-		header: `<h1 class="modal-title fs-5" id="staticBackdropLiveLabel">${"Masukkan Usulan".toUpperCase()}</h1>`,
+		header: `<h1 class="modal-title fs-5" id="staticBackdropLiveLabel">${"Form Login".toUpperCase()}</h1>`,
 		body: _fusulan("bg-info"),
 		footer:
 			modal_.btnClose("btn-secondary") +
