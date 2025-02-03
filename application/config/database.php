@@ -75,7 +75,7 @@ $query_builder = TRUE;
 // (ENVIRONMENT !== 'production')
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	// 'hostname' => 'localhost',
 	
 	
 	// 'username' => 'root',
@@ -83,9 +83,10 @@ $db['default'] = array(
 	// 'database' => 'sipj_app',
 	// 'dbdriver' => 'mysqli',
 
-	// 'database' => 'bappeda', k6wAMg@km8Cm@fX  bapped14_4dminDev
-	'username' => 'bapped14_4dminDev',
-	'password' => 'k6wAMg@km8Cm@fX',
+	// 'database' => 'bappeda', x2PnJ$CqvE70 bapped14_dev
+	'hostname' => 'localhost', //
+	'username' => 'bapped14_dev',
+	'password' => 'x2PnJ$CqvE70',
 	'database' => 'bapped14_musrenbang',
 	'dbdriver' => 'mysqli',
 	
