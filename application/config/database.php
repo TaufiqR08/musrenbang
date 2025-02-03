@@ -84,7 +84,7 @@ $db['default'] = array(
 	// 'dbdriver' => 'mysqli',
 
 	// 'database' => 'bappeda', 0Q3DMzz32En9 bapped14_4dminDev
-	'hostname' => 'trust.jagoanhosting.com:2083',
+	'hostname' => 'trust.jagoanhosting.com',
 	'username' => 'bapped14_4dminDev',
 	'password' => '0Q3DMzz32En9',
 	'database' => 'bapped14_musrenbang',
