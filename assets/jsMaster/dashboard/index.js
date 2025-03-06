@@ -95,14 +95,14 @@ function htmlTahunOption() {
 										{
 											cls: "-4 p-0",
 											html: `<img src="${
-												assert + "fs_css/logo/bg-bpt1.jpg"
+												assert + "fs_css/logo/bupati25.jpg"
 											}" class="bd-placeholder-img card-img-top" width="100%" height="100%">`,
 										},
 										{
 											cls: "-8  pcard3",
 											html: card_.sbody({
 												clsHeader: " bg-light text-dark",
-												htmlHeader: `Dr. Ir. H. W. Musyafirin, M.M - Fud Syaifuddin, ST`,
+												htmlHeader: `H. Amar Nurmansyah, S.T., M.Si. - Hj. Hanipah, S.Pt., M.M.Inov.`,
 												clsBody: "",
 												tukar: "Bagus H",
 												htmlBody: `
@@ -115,28 +115,28 @@ function htmlTahunOption() {
 																										attr: ` onclick="_selectTahun(2026)"`,
 																									}) +
 																									button_.ex2({
-																										text: `<span class="mdi mdi-database mdi-18px me-2"></span>2022`,
+																										text: `<span class="mdi mdi-database mdi-18px me-2"></span>2027`,
 																										cls: " btn-sm btn-warning m-2",
-																										attr: ` onclick="_selectTahun(2022)"`,
+																										attr: ` onclick="_selectTahun(2027)"`,
 																									}) +
 																									button_.ex2({
-																										text: `<span class="mdi mdi-database mdi-18px me-2"></span>2023`,
+																										text: `<span class="mdi mdi-database mdi-18px me-2"></span>2028`,
 																										cls: " btn-sm btn-info m-2",
-																										attr: ` onclick="_selectTahun(2023)"`,
+																										attr: ` onclick="_selectTahun(2028)"`,
 																									})
 																								}
                                             </div>
                                             <div class="p-2 m-auto">
                                                 ${
 																									button_.ex2({
-																										text: `<span class="mdi mdi-database mdi-18px me-2"></span>2024`,
+																										text: `<span class="mdi mdi-database mdi-18px me-2"></span>2029`,
 																										cls: " btn-sm btn-primary me-2",
-																										attr: ` onclick="_selectTahun(2024)"`,
+																										attr: ` onclick="_selectTahun(2029)"`,
 																									}) +
 																									button_.ex2({
-																										text: `<span class="mdi mdi-database mdi-18px me-2"></span>2025`,
+																										text: `<span class="mdi mdi-database mdi-18px me-2"></span>2030`,
 																										cls: " btn-sm btn-success me-2",
-																										attr: ` onclick="_selectTahun(2025)"`,
+																										attr: ` onclick="_selectTahun(2030)"`,
 																									})
 																								}
                                             </div>
