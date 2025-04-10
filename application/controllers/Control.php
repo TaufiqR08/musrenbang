@@ -89,8 +89,9 @@ class Control extends CI_Controller {
             }
         } 
     }
-    public function usulanDetail($val){
+    public function usulanDetail($val){ 
         $portal=$this->_keamanan(_getNKA("p-usu".$this->sess->tahapan,false));
+        // return print_r($portal);
         if($portal['exec']){
             $this->_['page']="usulanDetail";
             $this->_['param']=$val;

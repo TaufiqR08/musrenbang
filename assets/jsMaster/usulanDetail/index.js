@@ -27,7 +27,7 @@ function _onload(data) {
 	footer.innerHTML =
 		`
         <div class="container-fluid bg-info text-light p-1 text-center">
-            <p>BAPPEDA©2022,Kabupaten Sumbawa Barat</p>
+            <p>BUILD BY BAPPEDA©2022,Kabupaten Sumbawa Barat</p>
         </div>
     ` +
 		modal_.ex1({
@@ -56,7 +56,7 @@ function _formData() {
 			btn:
 				_.kdJabatan != 2 && !Number(_.key.c)
 					? button_.ex2({
-							text: `<span class="mdi mdi-form-select "></span> Form Entri`,
+							text: `<span class="mdi mdi-form-select "></span> Form Usulan`,
 							cls: " btn-sm bg-info ",
 							attr: ` onclick='_fadd()'`,
 					  })
@@ -93,39 +93,39 @@ function _formData() {
 						},
 					],
 				}) +
+				// style_.rowCol({
+				// 	clsRow: " container p-2",
+				// 	col: [
+				// 		{
+				// 			cls: "-6",
+				// 			html: "Tema",
+				// 		},
+				// 		{
+				// 			cls: "-6 ",
+				// 			html: button_.ex1({
+				// 				clsGroup: "",
+				// 				listBtn: [
+				// 					{
+				// 						text: `<span class="mdi mdi-chart-bar-stacked text-light"></span>`,
+				// 						cls: " btn-sm btn-dark",
+				// 						attr: "",
+				// 					},
+				// 					{
+				// 						text: _.priotitas.valueName,
+				// 						cls: " btn-sm btn-warning ",
+				// 						attr: "",
+				// 					},
+				// 				],
+				// 			}),
+				// 		},
+				// 	],
+				// }) +
 				style_.rowCol({
 					clsRow: " container p-2",
 					col: [
 						{
 							cls: "-6",
-							html: "Prioritas",
-						},
-						{
-							cls: "-6 ",
-							html: button_.ex1({
-								clsGroup: "",
-								listBtn: [
-									{
-										text: `<span class="mdi mdi-chart-bar-stacked text-light"></span>`,
-										cls: " btn-sm btn-dark",
-										attr: "",
-									},
-									{
-										text: _.priotitas.valueName,
-										cls: " btn-sm btn-warning ",
-										attr: "",
-									},
-								],
-							}),
-						},
-					],
-				}) +
-				style_.rowCol({
-					clsRow: " container p-2",
-					col: [
-						{
-							cls: "-6",
-							html: "Sub kegiatan",
+							html: "Kamus Usulan",
 						},
 						{
 							cls: "-6 ",
@@ -138,7 +138,7 @@ function _formData() {
 										attr: "",
 									},
 									{
-										text: _.sub.nmSub,
+										text: _.sub.kmsUsulan,
 										cls: " btn-sm btn-warning ",
 										attr: "",
 									},
@@ -210,7 +210,7 @@ function setTabel() {
 					"paguAnggaran$",
 					"status",
 				],
-				namaKolom: ["Desa", "Usulan", "Vol Satuan", "Pagu", "Status"],
+				namaKolom: ["Desa", "Masalah", "Vol Satuan", "Pagu", , "Status"],
 				action: infoSupport1,
 			}),
 		})
@@ -219,7 +219,7 @@ function setTabel() {
 function _fadd() {
 	modal_.setMo({
 		ex: 1,
-		header: `<h1 class="modal-title fs-5" id="staticBackdropLiveLabel">${"Form Login".toUpperCase()}</h1>`,
+		header: `<h1 class="modal-title fs-5" id="staticBackdropLiveLabel">${"Form Usulan".toUpperCase()}</h1>`,
 		body: _fusulan("bg-info"),
 		footer:
 			modal_.btnClose("btn-secondary") +
@@ -251,11 +251,11 @@ function _fadded() {
 	};
 
 	if (_isNull(param.masalah))
-		return _toast({ bg: "e", msg: "entri permasalah !!!" });
+		return _toast({ bg: "e", msg: "Masukkan Permasalahan !!!" });
 	if (_isNull(param.uraianPekerjaan))
-		return _toast({ bg: "e", msg: "entri uraian pekerjaan !!!" });
+		return _toast({ bg: "e", msg: "Masukkan Uraian Pekerjaan !!!" });
 	if (_isNull(param.lokasi))
-		return _toast({ bg: "e", msg: "entri lokasi !!!" });
+		return _toast({ bg: "e", msg: "Lokasi Tidak Boleh Kosong !!!" });
 	if (_isNull(param.volume))
 		return _toast({ bg: "e", msg: "entri volume !!!" });
 	if (_isNull(param.satuan))

@@ -68,6 +68,22 @@
             ".$qwhere."
             GROUP BY b.kdSub,b.kdDinas";
     }
+    function _dtKamusUsulanMusrenbang($kdkec,$tahapan,$where){
+        $qwhere="";
+        if(strlen($where)>0){
+            $qwhere=" where ".$where;
+        }
+        return "
+            select 
+                *,
+                (
+                    select concat(count(id),' usulan') from musrembang 
+                    where kdSub=a.id and kdkec='".$kdkec."' and kdDinas=a.kdDinas and tahapan='".$tahapan."' and tahun=a.taKU
+                ) as tusulan
+            from pakar_masalah a 
+            ".$qwhere."
+            order by a.id asc";
+    }
     function _dsub($where){
         $qwhere="";
         if(strlen($where)>0){
@@ -109,12 +125,24 @@
         if(strlen($where)>0){
             $qwhere=" where ".$where;
         }
+        // return "
+        //     select 
+        //         a.*,
+        //         (select nmDinas from dinas where kdDinas=a.kdKec and taDinas=a.tahun) as nmKec,
+        //         (select nmDinas from dinas where kdDinas=a.kdDinas and taDinas=a.tahun) as nmDinas
+        //     from musrembang a
+        //     ".$qwhere;
         return "
             select 
                 a.*,
                 (select nmDinas from dinas where kdDinas=a.kdKec and taDinas=a.tahun) as nmKec,
-                (select nmDinas from dinas where kdDinas=a.kdDinas and taDinas=a.tahun) as nmDinas
+                b.nmDinas,
+                b.kmsUsulan,
+                b.nmUrusan
             from musrembang a
+            join pakar_masalah b on
+                a.kdSub = b.id and
+                a.tahun = b.taKU
             ".$qwhere;
     }
     function _dmusrenbangJoinFull($where){

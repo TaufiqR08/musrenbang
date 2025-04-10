@@ -63,6 +63,13 @@ function _formData() {
 			attrHeader: `"`,
 			bgForm: "",
 			isi:
+				// _inpSejajar({
+				// 	attrRow: "",
+				// 	attrCol: "",
+				// 	attrLabel: "color:black",
+				// 	judul: "Tema",
+				// 	isi: `<p class='btn m-2'>${_.priotitas[0].valueName}</p>`,
+				// }) +
 				_inpComboBox({
 					judul: "Kecamatan",
 					id: "kdKec",
@@ -73,16 +80,16 @@ function _formData() {
 					index: "Bagus  H",
 					change: "_changeKec(this)",
 				}) +
-				_inpComboBox({
-					judul: "Prioritas",
-					id: "kdPrio",
-					color: "black",
-					data: _.priotitas,
-					index: "Bagus  H",
-					bg: "bg-warning m-2",
-					method: "sejajar",
-					change: "_changePrio(this)",
-				}) +
+				// _inpComboBox({
+				// 	judul: /*"Prioritas"*/ "Tema",
+				// 	id: "kdPrio",
+				// 	color: "black",
+				// 	data: _.priotitas,
+				// 	index: "Bagus  H",
+				// 	bg: "bg-warning m-2",
+				// 	method: "sejajar",
+				// 	change: "_changePrio(this)",
+				// }) +
 				_lines({}) +
 				`<div id='tabelShow' style="margin: auto;">` +
 				`</div>`,
@@ -105,8 +112,8 @@ function setTabel() {
 			isi: _tabel({
 				data: _.dinas[_.indDinas].data[_.indPrio],
 				no: 1,
-				kolom: ["nmDinas", "nmSub", "tusulan"],
-				namaKolom: ["Dinas", "Sub kegiatan", "Total"],
+				kolom: ["nmUrusan", "nmDinas", "kmsUsulan", "tusulan"],
+				namaKolom: ["urusan", "Dinas", "Kamus Usulan", "Total"],
 				action: infoSupport1,
 			}),
 		})
@@ -163,15 +170,16 @@ function _gousulanDetail(ind) {
 		kdKec: _.dinas[_.indDinas].value,
 		// nmKec :_.dinas[_.indDinas].valueName,
 
-		kdPri: _.priotitas[_.indPrio].value,
+		// kdPri: _.priotitas[_.indPrio].value,
 		// nmPri :_.priotitas[_.indPrio].valueName,
 
 		tahun: _.tahun,
 
-		kdSub: _.dinas[_.indDinas].data[_.indPrio][ind]["kdSub"],
+		kdSub: _.dinas[_.indDinas].data[_.indPrio][ind]["id"],
 		// nmSub :_.dinas[_.indDinas].data[_.indPrio][ind]['nmSub'],
-		kdDinas: _.dinas[_.indDinas].data[_.indPrio][ind]["kdDinas"],
+		kdDinas: _.dinas[_.indDinas].data[_.indPrio][ind]["KdDinas"],
 	};
+
 	_redirectOpen("control/usulanDetail/" + btoa(JSON.stringify(param)));
 }
 function _fexp() {

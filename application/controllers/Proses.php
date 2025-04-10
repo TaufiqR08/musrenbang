@@ -97,14 +97,14 @@ class Proses extends CI_Controller {
             $q="
                 INSERT INTO `musrembang`(
                     `id`, `kdKec`, `kdDinas`, `kdSub`, 
-                    `prioritas`, `masalah`, `uraianPekerjaan`, 
+                    `masalah`, `uraianPekerjaan`, 
                     `desa`, `lokasi`, `volume`, 
                     `satuan`, `paguAnggaran`,
                     `tahapan`, `tahun`
                 )values(
                     ".$this->mbgs->_valforQuery($kdTabel).",".$this->mbgs->_valforQuery($val->kdKec).",".$this->mbgs->_valforQuery($val->kdDinas).",
                         ".$this->mbgs->_valforQuery($val->kdSub).",
-                    ".$this->mbgs->_valforQuery($val->kdPri).",".$this->mbgs->_valforQuery($masalah).",".$this->mbgs->_valforQuery($uraianPekerjaan).",
+                    ".$this->mbgs->_valforQuery($masalah).",".$this->mbgs->_valforQuery($uraianPekerjaan).",
                     ".$this->mbgs->_valforQuery($desa).",".$this->mbgs->_valforQuery($lokasi).",".$this->mbgs->_valforQuery($volume).",
                     ".$this->mbgs->_valforQuery($satuan).",".$this->mbgs->_valforQuery($paguAnggaran).",
                     ".$this->mbgs->_valforQuery($this->tahapan).",".$this->mbgs->_valforQuery($val->tahun)."
@@ -115,8 +115,7 @@ class Proses extends CI_Controller {
                 $this->_['data']=$this->qexec->_func(
                     _dmusrenbang(" 
                         kdKec='".$val->kdKec."' and kdSub='".$val->kdSub."' and 
-                        kdDinas='".$val->kdDinas."' and tahun='".$val->tahun."' and
-                        prioritas='".$val->kdPri."' and tahapan='".$this->tahapan."'
+                        kdDinas='".$val->kdDinas."' and tahun='".$val->tahun."'  and tahapan='".$this->tahapan."'
                         GROUP BY id
                     ")
                 );
@@ -153,8 +152,7 @@ class Proses extends CI_Controller {
                     `id`=".$this->mbgs->_valforQuery($id)." and
                     `kdKec`=".$this->mbgs->_valforQuery($val->kdKec)." and
                     `kdDinas`=".$this->mbgs->_valforQuery($val->kdDinas)." and
-                    `kdSub`=".$this->mbgs->_valforQuery($val->kdSub)." and
-                    `prioritas`=".$this->mbgs->_valforQuery($val->kdPri)." and
+                    `kdSub`=".$this->mbgs->_valforQuery($val->kdSub)." and 
                     `tahapan`=".$this->mbgs->_valforQuery($this->tahapan)." and
                     `tahun`=".$this->mbgs->_valforQuery($val->tahun)."
             ";
@@ -163,8 +161,7 @@ class Proses extends CI_Controller {
                 $this->_['data']=$this->qexec->_func(
                     _dmusrenbang(" 
                         kdKec='".$val->kdKec."' and kdSub='".$val->kdSub."' and 
-                        kdDinas='".$val->kdDinas."' and tahun='".$val->tahun."' and
-                        prioritas='".$val->kdPri."' and tahapan='".$this->tahapan."'
+                        kdDinas='".$val->kdDinas."' and tahun='".$val->tahun."'  and tahapan='".$this->tahapan."'
                         GROUP BY id
                     ")
                 );
@@ -275,8 +272,7 @@ class Proses extends CI_Controller {
                     `id`=".$this->mbgs->_valforQuery($id)." and
                     `kdKec`=".$this->mbgs->_valforQuery($val->kdKec)." and
                     `kdDinas`=".$this->mbgs->_valforQuery($val->kdDinas)." and
-                    `kdSub`=".$this->mbgs->_valforQuery($val->kdSub)." and
-                    `prioritas`=".$this->mbgs->_valforQuery($val->kdPri)." and
+                    `kdSub`=".$this->mbgs->_valforQuery($val->kdSub)." and 
                     `tahapan`=".$this->mbgs->_valforQuery($this->tahapan)." and
                     `tahun`=".$this->mbgs->_valforQuery($val->tahun)."
             ";
@@ -285,8 +281,7 @@ class Proses extends CI_Controller {
                 $this->_['data']=$this->qexec->_func(
                     _dmusrenbang(" 
                         kdKec='".$val->kdKec."' and kdSub='".$val->kdSub."' and 
-                        kdDinas='".$val->kdDinas."' and tahun='".$val->tahun."' and
-                        prioritas='".$val->kdPri."' and tahapan='".$this->tahapan."'
+                        kdDinas='".$val->kdDinas."' and tahun='".$val->tahun."'  and tahapan='".$this->tahapan."'
                         GROUP BY id
                     ")
                 );

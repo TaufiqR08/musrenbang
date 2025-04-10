@@ -107,8 +107,8 @@ class WsKomponen extends CI_Controller {
         $this->_['priotitas']=$this->qexec->_func(_cbPrio(" where tahun='".$this->tahun."'"));
         
 		// return print_r(_dtsubMusrenbang($this->_['dinas'][0]['value'],$this->tahapan," b.idPri=1 and b.taSub='".$this->tahun."' "));
-        //ketika pra kecamatan, maka data sub kegiatan
-        $this->_['dinas'][0]['data'][0]=$this->qexec->_func(_dtsubMusrenbang($this->_['dinas'][0]['value'],$this->tahapan," b.idPri=1 and b.taSub='".$this->tahun."' "));
+        //ketika pra kecamatan, maka data sub kegiatan 
+        $this->_['dinas'][0]['data'][0]=$this->qexec->_func(_dtKamusUsulanMusrenbang($this->_['dinas'][0]['value'],$this->tahapan,""));
 
         return print_r(json_encode($this->_));
     }
@@ -136,8 +136,8 @@ class WsKomponen extends CI_Controller {
 
         $this->_['tahapan']=$this->getTahapan($this->tahapan);
         $this->_['dinas']=$this->qexec->_func(_cbDinas(" where kdDinas='".$val->kdKec."' and taDinas='".$val->tahun."'"))[0];
-        $this->_['priotitas']=$this->qexec->_func(_cbPrio(" where tahun='".$val->tahun."' and id='".$val->kdPri."'"))[0];
-        $this->_['sub']=$this->qexec->_func(_dsub(" kdDinas='".$val->kdDinas."' and taSub='".$val->tahun."' and kdSub='".$val->kdSub."'"))[0];
+        // $this->_['priotitas']=$this->qexec->_func(_cbPrio(" where tahun='".$val->tahun."' and id='".$val->kdPri."'"))[0];
+        $this->_['sub']=$this->qexec->_func(_dtKamusUsulanMusrenbang("",""," a.id='".$val->kdSub."'"))[0];
         $this->_['desa']=$this->qexec->_func(_cbDesa(" kdKec='".$val->kdKec."'"));
 
         $this->_['kdJabatan']=$this->kdJabatan; 
@@ -145,8 +145,8 @@ class WsKomponen extends CI_Controller {
         //ketika pra kecamatan, maka data sub kegiatan
         $this->_['data']=$this->qexec->_func(_dmusrenbang(" 
             kdKec='".$val->kdKec."' and kdSub='".$val->kdSub."' and 
-            kdDinas='".$val->kdDinas."' and tahun='".$val->tahun."' and
-            prioritas='".$val->kdPri."' and tahapan='".$this->tahapan."'
+            kdDinas='".$val->kdDinas."' and tahun='".$val->tahun."' 
+            and tahapan='".$this->tahapan."'
             GROUP BY id
         "));
 
@@ -216,8 +216,7 @@ class WsKomponen extends CI_Controller {
         }
 
         $this->_['priotitas'][0]['data']=$this->qexec->_func(_dmusrenbangJoin(" 
-            a.tahun='".$this->tahun."' and
-            a.prioritas='".$this->_['priotitas'][0]['value']."' and a.tahapan='".$this->tahapan."'
+            a.tahun='".$this->tahun."' and a.tahapan='".$this->tahapan."'
             GROUP BY a.id,a.kdKec
         "));
         $this->_['desa']=$this->qexec->_func(_cbDesa(""));
@@ -235,6 +234,13 @@ class WsKomponen extends CI_Controller {
     }
     
     function getKeyAct($obj,$dkey){
+        // return print_r($this->sess->kdMember1);
+        // return print_r(_groupKey(
+        //     _getNKA($obj,false),
+        //     $this->sess->kdMember1,
+        //     $this->sess->tahun,
+        //     $this->dapp['kd']
+        // ));
         $key=$this->qexec->_func(
             _groupKey(
                 _getNKA($obj,false),
