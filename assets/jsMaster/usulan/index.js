@@ -102,8 +102,8 @@ function setTabel() {
 	infoSupport1.push({
 		clsBtn: `btn-outline-primary`,
 		func: "_gousulanDetail()",
-		icon: `<i class="mdi mdi-arrow-right-bold-box"></i> view`,
-		title: "view",
+		icon: `<i class="mdi mdi-arrow-right-bold-box"></i> Input`,
+		title: "Input",
 	});
 	$("#tabelShow").html(
 		_tabelResponsive({
