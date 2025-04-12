@@ -168,23 +168,23 @@ function setTabel(data) {
 				no: 1,
 				id: "Bagus H",
 				kolom: [
+					"nmDinas",
 					"nmUrusan",
 					"kmsUsulan", //nmUrusan
 					"desa",
 					"uraianPekerjaan",
 					"volume&satuan",
-					"paguAnggaran$",
+					// "paguAnggaran$",
 					"status",
 				],
 				namaKolom: [
-					// "Dinas / Badan ",
+					"Dinas ",
 					"Urusan",
-
 					"Kamus Usulan",
 					"Desa",
-					"Usulan",
+					"Masalah",
 					"Vol Satuan",
-					"Pagu",
+					// "Pagu",
 					"Status",
 				],
 				action: infoSupport1,

@@ -64,7 +64,10 @@ class Proses extends CI_Controller {
             $kdKec   =$baseEND->{'kdKec'};
             $kdPri   =$baseEND->{'kdPri'};
             $tahun   =$baseEND->{'tahun'};
-            $this->_['data']=$this->qexec->_func(_dtsubMusrenbang($kdKec,$this->tahapan," b.idPri='".$kdPri."' and b.taSub='".$tahun."' "));
+            // _dtKamusUsulanMusrenbang($this->_['dinas'][0]['value'],$this->tahapan,""
+            // $this->_['data']=$this->qexec->_func(_dtsubMusrenbang($kdKec,$this->tahapan," b.idPri='".$kdPri."' and b.taSub='".$tahun."' "));
+            $this->_['data']=$this->qexec->_func(_dtKamusUsulanMusrenbang($kdKec,$this->tahapan,""));
+
             return $this->mbgs->resTrue($this->_);
         }
     }

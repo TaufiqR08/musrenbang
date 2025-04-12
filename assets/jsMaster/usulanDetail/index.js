@@ -385,7 +385,7 @@ function _goRespon(ind) {
 		kdKec: _.data[ind].kdKec,
 		nmKec: _.dinas.valueName,
 		tahun: _.data[ind].tahun,
-		nmPri: _.priotitas.valueName,
+		nmPri: "",
 	};
 	_redirectOpen("control/respon/" + btoa(JSON.stringify(param)));
 }

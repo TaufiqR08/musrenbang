@@ -96,33 +96,33 @@ function _formData() {
 			attrHeader: ``,
 			bgForm: "",
 			isi:
-				style_.rowCol({
-					clsRow: " container p-2",
-					col: [
-						{
-							cls: "-6",
-							html: "Prioritas",
-						},
-						{
-							cls: "-6 ",
-							html: button_.ex1({
-								clsGroup: "",
-								listBtn: [
-									{
-										text: `<span class="mdi mdi-greenhouse text-light"></span>`,
-										cls: " btn-sm btn-dark",
-										attr: "",
-									},
-									{
-										text: _.nmPri,
-										cls: " btn-sm btn-warning ",
-										attr: "",
-									},
-								],
-							}),
-						},
-					],
-				}) +
+				// style_.rowCol({
+				// 	clsRow: " container p-2",
+				// 	col: [
+				// 		{
+				// 			cls: "-6",
+				// 			html: "Prioritas",
+				// 		},
+				// 		{
+				// 			cls: "-6 ",
+				// 			html: button_.ex1({
+				// 				clsGroup: "",
+				// 				listBtn: [
+				// 					{
+				// 						text: `<span class="mdi mdi-greenhouse text-light"></span>`,
+				// 						cls: " btn-sm btn-dark",
+				// 						attr: "",
+				// 					},
+				// 					{
+				// 						text: _.nmPri,
+				// 						cls: " btn-sm btn-warning ",
+				// 						attr: "",
+				// 					},
+				// 				],
+				// 			}),
+				// 		},
+				// 	],
+				// }) +
 				style_.rowCol({
 					clsRow: " container p-2",
 					col: [
