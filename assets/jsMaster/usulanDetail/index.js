@@ -182,7 +182,7 @@ function setTabel() {
 	if (!Number(_.key.k)) {
 		infoSupport1.push({
 			clsBtn: `btn-outline-info`,
-			func: "_fdel()",
+			func: "_fchangeStatus()",
 			icon: `<i class="mdi mdi-lightbulb-question-outline"></i> Status`,
 			title: "change status",
 		});
