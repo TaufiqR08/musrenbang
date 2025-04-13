@@ -218,7 +218,7 @@ function _fusulan($bg) {
 		}) +
 		_inpGroupPrepend({
 			id: "uraianPekerjaan",
-			placeholder: "Uraian",
+			placeholder: "Usulan",
 			cls: "",
 			attr: ";",
 			type: "text",

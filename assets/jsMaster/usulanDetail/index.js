@@ -217,7 +217,6 @@ function setTabel() {
 					"Usulan",
 					"Vol Satuan",
 					"Pagu",
-					,
 					"Status",
 				],
 				action: infoSupport1,
@@ -250,7 +249,7 @@ function _fadd() {
 function _fadded() {
 	param = {
 		masalah: $("#masalah").val(),
-		uraianPekerjaan: $("#uraianPekerjaan").val(),
+		uraianPekerjaan: $("#usulan").val(),
 		desa: $("#desa").val(),
 		lokasi: $("#lokasi").val(),
 		volume: $("#volume").val(),
@@ -262,7 +261,7 @@ function _fadded() {
 	if (_isNull(param.masalah))
 		return _toast({ bg: "e", msg: "Masukkan Permasalahan !!!" });
 	if (_isNull(param.uraianPekerjaan))
-		return _toast({ bg: "e", msg: "Masukkan Uraian Pekerjaan !!!" });
+		return _toast({ bg: "e", msg: "Masukkan Usulan !!!" });
 	if (_isNull(param.lokasi))
 		return _toast({ bg: "e", msg: "Lokasi Tidak Boleh Kosong !!!" });
 	if (_isNull(param.volume))

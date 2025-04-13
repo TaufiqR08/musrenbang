@@ -182,7 +182,7 @@ function _formData() {
 					col: [
 						{
 							cls: "-6",
-							html: "Uraian Pekerjaan",
+							html: "Usulan",
 						},
 						{
 							cls: "-6 ",
