@@ -205,12 +205,21 @@ function setTabel() {
 				no: 1,
 				kolom: [
 					"desa",
+					"masalah",
 					"uraianPekerjaan",
 					"volume&satuan",
 					"paguAnggaran$",
 					"status",
 				],
-				namaKolom: ["Desa", "Masalah", "Vol Satuan", "Pagu", , "Status"],
+				namaKolom: [
+					"Desa",
+					"Masalah",
+					"Usulan",
+					"Vol Satuan",
+					"Pagu",
+					,
+					"Status",
+				],
 				action: infoSupport1,
 			}),
 		})
