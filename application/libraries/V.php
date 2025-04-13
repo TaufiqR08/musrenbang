@@ -7,7 +7,7 @@
             "kd"=>"MFC2G18-05",
             "nm"=>"E-MUSRENBANG",
             "nama"=>"M Software Center",
-            "logo"=>"1.png",
+            "logo"=>"1.jpg",
             "copyright"=>"Copyright © BappedaKSB",
             "loader"=>'loader.webp',
             "unik"=>"MFC-",

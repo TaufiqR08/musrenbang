@@ -77,7 +77,7 @@ class Laporan extends CI_Controller {
         }
 
         $tahun=$this->qexec->_func(_tahun("where selected=1"))[0]['nama'];
-        $dt=$this->qexec->_func(_dmusrenbangJoinFull(" 
+        $dt=$this->qexec->_func(_dmusrenbangJoin(" 
             a.tahun='".$tahun."' and
             ".$terima."
             ".$kdKec."
@@ -108,7 +108,7 @@ class Laporan extends CI_Controller {
             "FORMAT"		=>"legal",
             "name"			=>$this->getTahapan($tahapan),
             // "preview"       =>true,
-            // "preview"       =>false,
+            "preview"       =>false,
             "html"          =>_header($header)
                                 ._tblMusrenbang($dt)
                             // ._informasiRenstra($this->_)

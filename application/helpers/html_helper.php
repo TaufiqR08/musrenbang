@@ -37,18 +37,14 @@
             <table cellspacing="0" cellpadding="0" border="0" style="text-align: center; width:100%;  font-size:10px;" border="1">
                 <thead>
                     <tr>
-                        <th width="'.$w03.'">No</th>
-                        <th width="'.$w1.'">Prioritas</th>
-                        <th width="'.$w1.'">Kecamatan</th>
-                        <th width="'.$w1.'">Dinas</th>
-                        <th width="'.$w1.'">Sub Kegiatan</th>
-
-                        <th width="'.$w1.'">Permasalahan</th>
-                        <th width="'.$w1.'">Uraian Pekerjaan</th>
-                        <th width="'.$w1.'">Desa</th>
+                        <th width="'.$w03.'">No</th> 
+                        <th width="'.$w1.'">Kecamatan</th> 
+                        <th width="'.$w1.'">Desa</th>  
+                        <th width="'.$w2.'">Permasalahan</th>
+                        <th width="'.$w1.'">Usulan</th>
                         <th width="'.$w07.'">volume</th>
-                        <th width="'.$w1.'">Pagu</th>
-
+                        <th width="'.$w1.'">Pagu</th> 
+                        <th width="'.$w2.'">Dinas</th>  
                         <th width="'.$w1.'">Keterangan</th>
                     </tr>
                 </thead>
@@ -57,18 +53,14 @@
         foreach ($dt as $i => $v) {
             $html.='
                 <tr >
-                    <td width="'.$w03.'" >'.($i+1).'</td>
-                    <td width="'.$w1.'">'.$v['nmPri'].'</td>
-                    <td width="'.$w1.'">'.$v['nmKec'].'</td>
-                    <td width="'.$w1.'">'.$v['nmDinas'].'</td>
-                    <td width="'.$w1.'">'.$v['nmSub'].'</td>
-                
-                    <td width="'.$w1.'">'.$v['masalah'].'</td>
-                    <td width="'.$w1.'">'.$v['uraianPekerjaan'].'</td>
+                    <td width="'.$w03.'" >'.($i+1).'</td> 
+                    <td width="'.$w1.'">'.$v['nmKec'].'</td> 
                     <td width="'.$w1.'">'.$v['desa'].' , '.$v['lokasi'].'</td>
+                    <td width="'.$w2.'">'.$v['masalah'].'</td>
+                    <td width="'.$w1.'">'.$v['uraianPekerjaan'].'</td>
                     <td width="'.$w07.'">'.$v['volume'].' ('.$v['satuan'].')</td>
-                    <td width="'.$w1.'">Rp.'.$CI->mbgs->_uang($v['paguAnggaran']).'</td>
-                
+                    <td width="'.$w1.'">Rp.'.$CI->mbgs->_uang($v['paguAnggaran']).'</td> 
+                    <td width="'.$w2.'">'.$v['nmDinas'].'</td> 
                     <td width="'.$w1.'">'.$v['alasan'].'</td>
                 </tr>
             ';
