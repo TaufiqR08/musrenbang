@@ -182,7 +182,7 @@ function setTabel(data) {
 					"Urusan",
 					"Kamus Usulan",
 					"Desa",
-					"Masalah",
+					"Usulan",
 					"Vol Satuan",
 					// "Pagu",
 					"Status",
