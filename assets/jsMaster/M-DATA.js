@@ -301,7 +301,7 @@ function _fInfoUsulan(v) {
 					html: card_.ex2({
 						clsCard: " mb-1",
 						clsHeader: " bg-info",
-						htmlHeader: "Permasalahan",
+						htmlHeader: "Usulan Permasalahan",
 						clsBody: "",
 						htmlBody: v.masalah,
 					}),
@@ -316,7 +316,7 @@ function _fInfoUsulan(v) {
 					html: card_.ex2({
 						clsCard: "mb-1",
 						clsHeader: "bg-info",
-						htmlHeader: "Uraian Pekerjaan",
+						htmlHeader: "Data/Informasi Pendukung",
 						clsBody: "",
 						htmlBody: v.uraianPekerjaan,
 					}),

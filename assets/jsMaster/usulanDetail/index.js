@@ -208,7 +208,7 @@ function setTabel() {
 					"masalah",
 					"uraianPekerjaan",
 					// "volume&satuan",
-					// "paguAnggaran$",
+					"paguAnggaran$",
 					"status",
 				],
 				namaKolom: [
@@ -216,7 +216,7 @@ function setTabel() {
 					"Usulan Permasalahan",
 					"Data/Informasi Pendukung",
 					// "Vol Satuan",
-					// "Pagu",
+					"Pagu",
 					"Status",
 				],
 				action: infoSupport1,
@@ -318,8 +318,8 @@ function _fupded(ind) {
 		uraianPekerjaan: $("#uraianPekerjaan").val(),
 		desa: $("#desa").val(),
 		lokasi: $("#lokasi").val(),
-		volume: $("#volume").val(),
-		satuan: $("#satuan").val(),
+		// volume: $("#volume").val(),
+		// satuan: $("#satuan").val(),
 		paguAnggaran: Number($("#paguAnggaran").val()),
 		val: _.val,
 		id: _.data[ind].id,
@@ -331,10 +331,10 @@ function _fupded(ind) {
 		return _toast({ bg: "e", msg: "entri uraian pekerjaan !!!" });
 	if (_isNull(param.lokasi))
 		return _toast({ bg: "e", msg: "entri lokasi !!!" });
-	if (_isNull(param.volume))
-		return _toast({ bg: "e", msg: "entri volume !!!" });
-	if (_isNull(param.satuan))
-		return _toast({ bg: "e", msg: "entri satuan !!!" });
+	// if (_isNull(param.volume))
+	// 	return _toast({ bg: "e", msg: "entri volume !!!" });
+	// if (_isNull(param.satuan))
+	// 	return _toast({ bg: "e", msg: "entri satuan !!!" });
 
 	_post("proses/updUsulan", param).then((res) => {
 		res = JSON.parse(res);
