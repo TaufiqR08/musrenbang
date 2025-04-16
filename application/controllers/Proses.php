@@ -81,8 +81,8 @@ class Proses extends CI_Controller {
             $desa  =$baseEND->{'desa'};
             $lokasi    =$baseEND->{'lokasi'};
 
-            $volume  =$baseEND->{'volume'};
-            $satuan    =$baseEND->{'satuan'};
+            $volume  ="";
+            $satuan    ="";
             $paguAnggaran  =$baseEND->{'paguAnggaran'};
             $val    =json_decode((base64_decode($baseEND->{'val'})));
 
@@ -138,8 +138,8 @@ class Proses extends CI_Controller {
             $desa  =$baseEND->{'desa'};
             $lokasi    =$baseEND->{'lokasi'};
 
-            $volume  =$baseEND->{'volume'};
-            $satuan    =$baseEND->{'satuan'};
+            $volume  ="";
+            $satuan    ="";
             $paguAnggaran  =$baseEND->{'paguAnggaran'};
             $val    =json_decode((base64_decode($baseEND->{'val'})));
             $id     =$baseEND->{'id'};
