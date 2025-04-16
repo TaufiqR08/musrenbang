@@ -249,25 +249,25 @@ function _fadd() {
 function _fadded() {
 	param = {
 		masalah: $("#masalah").val(),
-		uraianPekerjaan: $("#usulan").val(),
+		uraianPekerjaan: $("#uraianPekerjaan").val(),
 		desa: $("#desa").val(),
 		lokasi: $("#lokasi").val(),
-		volume: $("#volume").val(),
-		satuan: $("#satuan").val(),
+		// volume: $("#volume").val(),
+		// satuan: $("#satuan").val(),
 		paguAnggaran: Number($("#paguAnggaran").val()),
 		val: _.val,
 	};
 
 	if (_isNull(param.masalah))
-		return _toast({ bg: "e", msg: "Masukkan Permasalahan !!!" });
+		return _toast({ bg: "e", msg: "Masukkan Usulan Permasalahan !!!" });
 	if (_isNull(param.uraianPekerjaan))
-		return _toast({ bg: "e", msg: "Masukkan Usulan !!!" });
+		return _toast({ bg: "e", msg: "Masukkan Data/Informasi Pendukung !!!" });
 	if (_isNull(param.lokasi))
 		return _toast({ bg: "e", msg: "Lokasi Tidak Boleh Kosong !!!" });
-	if (_isNull(param.volume))
-		return _toast({ bg: "e", msg: "entri volume !!!" });
-	if (_isNull(param.satuan))
-		return _toast({ bg: "e", msg: "entri satuan !!!" });
+	// if (_isNull(param.volume))
+	// 	return _toast({ bg: "e", msg: "entri volume !!!" });
+	// if (_isNull(param.satuan))
+	// 	return _toast({ bg: "e", msg: "entri satuan !!!" });
 
 	_post("proses/insUsulan", param).then((res) => {
 		res = JSON.parse(res);
