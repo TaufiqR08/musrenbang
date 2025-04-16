@@ -213,8 +213,8 @@ function setTabel() {
 				],
 				namaKolom: [
 					"Desa",
-					"Masalah",
-					"Usulan",
+					"Usulan Permasalahan",
+					"Data/Informasi Pendukung",
 					"Vol Satuan",
 					"Pagu",
 					"Status",
