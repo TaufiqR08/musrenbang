@@ -209,7 +209,7 @@ function _fusulan($bg) {
 	return (
 		_inpGroupPrepend({
 			id: "masalah",
-			placeholder: "Permasalahan",
+			placeholder: "Usulan Permasalahan",
 			cls: "",
 			attr: ";",
 			type: "text",
@@ -218,7 +218,7 @@ function _fusulan($bg) {
 		}) +
 		_inpGroupPrepend({
 			id: "uraianPekerjaan",
-			placeholder: "Usulan",
+			placeholder: "Data/Informasi Pendukung",
 			cls: "",
 			attr: ";",
 			type: "text",
@@ -247,35 +247,35 @@ function _fusulan($bg) {
 			icon: '<i class="mdi mdi-crosshairs-gps ' + fcolor + '"></i>',
 			bg: $bg + " text-light",
 		}) +
-		style_.rowCol({
-			clsRow: "",
-			col: [
-				{
-					cls: "-6",
-					html: _inpGroupPrepend({
-						id: "volume",
-						placeholder: "Volume",
-						cls: "",
-						attr: ";",
-						type: "text",
-						icon: '<i class="mdi mdi-scale ' + fcolor + '"></i>',
-						bg: $bg + " text-light",
-					}),
-				},
-				{
-					cls: "-6 ",
-					html: _inpGroupPrepend({
-						id: "satuan",
-						placeholder: "Satuan",
-						cls: "",
-						attr: ";",
-						type: "text",
-						icon: '<i class="mdi mdi-seal ' + fcolor + '"></i>',
-						bg: $bg + " text-light",
-					}),
-				},
-			],
-		}) +
+		// style_.rowCol({
+		// 	clsRow: "",
+		// 	col: [
+		// 		{
+		// 			cls: "-6",
+		// 			html: _inpGroupPrepend({
+		// 				id: "volume",
+		// 				placeholder: "Volume",
+		// 				cls: "",
+		// 				attr: ";",
+		// 				type: "text",
+		// 				icon: '<i class="mdi mdi-scale ' + fcolor + '"></i>',
+		// 				bg: $bg + " text-light",
+		// 			}),
+		// 		},
+		// 		{
+		// 			cls: "-6 ",
+		// 			html: _inpGroupPrepend({
+		// 				id: "satuan",
+		// 				placeholder: "Satuan",
+		// 				cls: "",
+		// 				attr: ";",
+		// 				type: "text",
+		// 				icon: '<i class="mdi mdi-seal ' + fcolor + '"></i>',
+		// 				bg: $bg + " text-light",
+		// 			}),
+		// 		},
+		// 	],
+		// }) +
 		`
         <div id='dpagu'>
         ${_inpGroupPrepend({
