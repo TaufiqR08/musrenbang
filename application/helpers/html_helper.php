@@ -31,21 +31,21 @@
     function _tblMusrenbang($dt){
         $CI =& get_instance();
         $w1="10%;";$w4="40%;";$w15="15%;";$w25="25%;";$w03="3%;";
-        $w2="20%;";$w5="50%;";$w07="7%;";
-        $w2="20%;";$w6="60%;";
+        $w2="20%;";$w5="50%;";$w07="7%;";$w28="28%;";
+        $w2="20%;";$w6="60%;";$w09="9%;";$w08="8%";
+        $w11="12%;";
         $html='
             <table cellspacing="0" cellpadding="0" border="0" style="text-align: center; width:100%;  font-size:10px;" border="1">
                 <thead>
                     <tr>
                         <th width="'.$w03.'">No</th> 
                         <th width="'.$w1.'">Kecamatan</th> 
-                        <th width="'.$w1.'">Desa</th>  
-                        <th width="'.$w2.'">Permasalahan</th>
-                        <th width="'.$w1.'">Usulan</th>
-                        <th width="'.$w07.'">volume</th>
+                        <th width="'.$w09.'">Desa</th>  
+                        <th width="'.$w2.'">Usulan Permasalahan</th>
+                        <th width="'.$w28.'">Data/Informasi Pendukung</th>
                         <th width="'.$w1.'">Pagu</th> 
-                        <th width="'.$w2.'">Dinas</th>  
-                        <th width="'.$w1.'">Keterangan</th>
+                        <th width="'.$w11.'">Dinas</th>  
+                        <th width="'.$w08.'">Keterangan</th>
                     </tr>
                 </thead>
                 <tbody>';
@@ -55,13 +55,12 @@
                 <tr >
                     <td width="'.$w03.'" >'.($i+1).'</td> 
                     <td width="'.$w1.'">'.$v['nmKec'].'</td> 
-                    <td width="'.$w1.'">'.$v['desa'].' , '.$v['lokasi'].'</td>
+                    <td width="'.$w09.'">'.$v['desa'].' , '.$v['lokasi'].'</td>
                     <td width="'.$w2.'">'.$v['masalah'].'</td>
-                    <td width="'.$w1.'">'.$v['uraianPekerjaan'].'</td>
-                    <td width="'.$w07.'">'.$v['volume'].' ('.$v['satuan'].')</td>
+                    <td width="'.$w28.'">'.$v['uraianPekerjaan'].'</td>
                     <td width="'.$w1.'">Rp.'.$CI->mbgs->_uang($v['paguAnggaran']).'</td> 
-                    <td width="'.$w2.'">'.$v['nmDinas'].'</td> 
-                    <td width="'.$w1.'">'.$v['alasan'].'</td>
+                    <td width="'.$w11.'">'.$v['nmDinas'].'</td> 
+                    <td width="'.$w08.'">'.$v['alasan'].'</td>
                 </tr>
             ';
         }
