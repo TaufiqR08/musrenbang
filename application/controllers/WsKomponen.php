@@ -142,6 +142,12 @@ class WsKomponen extends CI_Controller {
 
         $this->_['kdJabatan']=$this->kdJabatan; 
 
+        return print_r(_dmusrenbang(" 
+        kdKec='".$val->kdKec."' and kdSub='".$val->kdSub."' and 
+        kdDinas='".$val->kdDinas."' and tahun='".$val->tahun."' 
+        and tahapan='".$this->tahapan."'
+        GROUP BY id
+    "));
         //ketika pra kecamatan, maka data sub kegiatan
         $this->_['data']=$this->qexec->_func(_dmusrenbang(" 
             kdKec='".$val->kdKec."' and kdSub='".$val->kdSub."' and 
